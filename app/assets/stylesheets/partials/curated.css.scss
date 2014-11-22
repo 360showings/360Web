@@ -1,0 +1,190 @@
+.iFrame {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: visible;
+  min-height: 2000px;
+}
+
+// Curated Page
+iframe { 
+  border: none!important;
+}
+#curated {
+  background: #444444;
+  border-bottom: 2px solid #444444;
+  position: relative;
+  z-index: 99;
+  height: 59px;
+  -webkit-box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.25);
+  a {
+    transition: all 0.35s ease-in-out;
+  }
+  .top-bar {
+    height: 59px;
+  }
+  .top-bar.expanded {
+    height: auto!important;
+  }
+  .top-bar .toggle-topbar.menu-icon {
+    margin-top: 12px;
+  }
+  .top-bar-section {
+    ul li ul li a {
+      background: darken($grey, 30%);
+      &:hover {
+        background: darken($grey, 50%);
+      }
+    }
+    ul li a {
+      color: white;
+      &:hover {
+        background: black;
+      }
+    }
+    .follow a {
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .moreLinks {
+      ul li a {
+        padding: 1rem 1.5rem;
+      }
+    }
+    .perkesLogo {
+      @media screen and (max-width: 1170px) {
+        display: none;
+      }
+      img {
+        width: 100px;
+        padding: 0.9rem 0 0;
+      }
+      a {
+        line-height: 37px!important;
+      }
+    }
+    .coupon {
+      a {
+        background: $red!important;
+        &:hover {
+          background: darken($red, 15%)!important;
+        }
+        .useBy {
+          display: block;
+          margin-top: -15px;
+          position: absolute;
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .top-bar-section {
+      top: 0;
+      li a:not(.button) {
+        line-height: 59px;
+      }
+      > ul > .divider {
+        height: 59px;
+      }
+      .dropdown li a {
+        line-height: 18px;
+      }
+      .has-dropdown > a {
+        padding-right: 60px!important;
+      }
+    }
+  } 
+  .row {
+    max-width: 100%;
+    .large-4, .large-8 {
+      padding: 0; 
+      height: 100%;
+    }
+  }
+  .redeem {
+    width: 40%;
+    padding-top: 0.5rem;
+    a {
+      float: left; 
+      margin: 0 1rem;
+    }
+    p {
+      margin: 0; 
+      font-size: 0.8rem; 
+      color: white; 
+      &:first-of-type { 
+        font-weight: bold;
+      }
+    }
+  }
+  .curator{
+    width: 250px;
+    img { 
+      float: left; 
+      display: inline-block;
+    }
+    .name {
+      float: left;
+      padding: 0.2rem 0 0 1rem;
+      height: 59px;
+      span {
+        text-transform: uppercase; 
+        color: darken($grey, 30%);
+        font-size: 0.65rem;
+        font-weight: bold;
+        margin: 0;
+      }
+      h2 { 
+        font-size: 0.85rem; 
+        margin: 0; 
+        color: white; 
+        margin: -8px 0 0 0;
+      }
+    }
+  }
+}
+
+img.bitcoin-icon {
+  float: left;
+  text-align: left;
+  display: inline-block;
+  margin: 0px 10px 0px 0px;
+  width: 60px;   
+}
+
+.relatedCoupon {
+  li {
+    width: 30rem!important;
+  }
+  li a {
+    height: 86px;
+    padding: 0!important;
+    line-height: auto!important;
+    .couponImage {
+      float: left!important;
+      overflow: hidden;
+      width: 30%!important;
+      height: 85px;
+    }
+    .couponDetails {
+      float: left!important;
+      text-align: left;
+      width: 70%!important;
+      padding: 1rem;
+      @media screen and (max-width: 940px) {padding:0.5rem 1rem;}
+      .title {
+        display: block;
+        width: 100%;
+      }
+      .vendor {
+        padding: 0.25rem 1rem;
+        background: lighten($darkgrey, 10%);
+        display: inline-block;
+        border-radius: 5px;
+      }
+    }
+  }
+}

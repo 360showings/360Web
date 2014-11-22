@@ -1,0 +1,139 @@
+/*
+=======================
+The Button Mixin.======
+=======================
+
+=It takes 3 arguments:=
+- the background-color ($bg),
+in our case we will pass it the color vars we defined above.
+
+- the icon ($icon),
+takes one of the named icons from the Icon-Object™
+
+- the icon position ($iconPosition)
+Vald values are 'left' and 'right'
+
+=And does fancy stuff=
+1. Figure out the lightness of the passed background-color via the lightness() function and set either a dark or a light text color.
+
+2. Loop over the Icon-Object™ until the name matches the passed $icon parameter and then
+
+  2.1 If $iconPosition == right select the :after element and set the corresponding unicode entity as the 'content' value. 
+*/
+
+@mixin button($bg, $icon:none, $iconPosition: right){
+  $color: white;
+  padding: 1.2em 2.3rem;
+  @if lightness($bg) > 68% {
+    $color: desaturate(darken($bg, 35), 70);
+    &:hover, &:focus {
+      background: darken($bg, 5);
+      color: darken($color, 5);
+    }
+  }
+  @else {
+    $color: lighten($bg, 35);
+    &:hover, &:focus {
+      background: darken($bg, 5);
+      color: lighten($color, 5);
+    }
+  }
+  
+  @each $thing in $icons{
+    @if nth($thing, 1) == $icon {
+      @if $iconPosition == right {  
+        padding-right: 3.5em;   
+        &:after {
+           content: nth($thing, 2);
+           right: 1.5em;
+        }
+      }
+       
+      @if $iconPosition == left {  
+        padding-left: 3.5em;     
+        &:before {
+           content: nth($thing, 2);
+           left: 1.5em;
+        }
+      }
+    }
+  }
+  
+  color: $color;
+  display: inline-block;
+  background: $bg;
+  @include transition(.3s);
+  font:{
+    family: sans-serif;
+    weight: 800;
+    size: .8rem;
+  }
+  text:{
+    transform: uppercase;
+    decoration: none;
+  }
+  border-radius: .7rem;
+  position: relative;
+      
+  &:before, &:after{
+    display: inline-block;
+    font-family: entypo;
+    position: absolute;    
+  }
+  &:active {
+    @include transform(scale(.92));
+  }
+  &:hover, &:focus {
+    border-radius: .5rem;
+    box-shadow: 0 0 0 5px lighten($bg, 20);
+  }
+}
+
+
+
+
+// clearfix
+@mixin clearfix() { *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+
+// css triangle
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // .example { @include cssTriangle(5px, #fff, bottom); }
+}
+
+// circle
+@mixin circleContainer(){
+    display: block;
+    width: 16rem;
+    height: 16rem;
+    background: #E6E7ED;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border: 1rem solid white;
+    box-shadow: inset 3px 2px 2px #efefef;
+    background-position:50% 50%;
+    background-repeat:no-repeat;  
+    margin: 0 auto 2rem; 
+}
+
+

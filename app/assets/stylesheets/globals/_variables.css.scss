@@ -1,0 +1,179 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Colors Settings
+$mainColor: #2ba6cb !default;
+$secondaryColor: #e9e9e9 !default;
+$alertColor: #c60f13 !default;
+$successColor: #5da423 !default;
+$txtColor: #222 !default;
+$highlightColor: #ffff99 !default;
+$black: #000 !default;
+$white: #fff !default;
+$shinyEdge: rgba(#fff, .5) !default;
+$darkEdge: rgba(#000, .2) !default;
+
+$darkblue:rgb(68, 68, 68);
+$blue:rgb(53, 185, 255);
+$lightblue:rgb(162, 227, 255);
+$beige:rgb(246, 245, 240);
+$grey:#e5e5e5;
+$darkgrey:#333;
+$orange:rgb(229, 144, 26);
+
+$red: rgb(235, 80, 66);
+$yellow: rgb(255, 255, 95);
+$green: rgb(180, 255, 92);
+$fb-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+// FLAT UI Colors
+
+  $primary-color:#ff554f;
+
+// Shades of Green
+  $emerland:  #2ECC71;
+  $nephritis: #27AE60;
+  $turquoise: #1ABC9C;
+  $green-sea: #16A085;
+
+// Shades of Blue
+  $peter-river: #3498DB;
+  $belize-hole: #2980B9;
+  $pale-blue:#0897b1;
+
+// Shades of Purple
+  $amethyst: #9859b6;
+  $wisteria: #8E44AD;
+
+// Shades of Gray
+   $clouds:        #ECF0F1;
+   $dark-clouds:   darken($clouds, 3%);
+   $silver:        #BDC3C7;
+   $concrete:      #95A5A6;
+   $asbestos:      #7F8C8D;
+   $wet-asphalt:   #34495E;
+   $midnight-blue: #2C3E50;
+
+// Shades of Yellow/Orange
+   $sun-flower:  #F1C40F;
+   $orange:      #F39C12;
+   $carrot:      #E67E22;
+   $pumpkin:     #D35400;
+
+// Shades of Red
+  $alizarin:    #E74C3C;
+  $pomegranate: #C0392B;
+
+// We use these as default colors throughout
+   $primary-color: $peter-river;
+   $secondary-color: $clouds;
+   $alert-color: $alizarin;
+   $success-color: $emerland;
+
+   $header-font-color: $midnight-blue;
+
+// Icon Object
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+$icons: 
+  ('save' '\1F4BE'),
+  ('delete' '\12as'),
+  ('fb' '\F30E'),
+  ('twitter' '\F309'),
+  ('bolt' '\26A1'),
+  ('danger' '\26A0'),
+  ('tick' '\2713'),
+  ('email' '\2709');
+;
+
+// Font Settings
+$fontSmoothing: antialiased;
+$headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$headerFontWeight: normal !default;
+$headerFontStyle: normal !default;
+$headerFontColor: #222 !default;
+$bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$bodyFontWeight: normal !default;
+$bodyFontStyle: normal !default;
+$bodyFontColor: $txtColor !default;
+
+// Media Queries
+$largeScreen: emCalc(768px) !default;
+$smallScreen: emCalc(1px) !default;
+$smallBreakPoint: "only screen and (min-width:"#{$smallScreen}")" !default;
+$largeBreakPoint: "only screen and (min-width:"#{$largeScreen}")" !default;
+
+// Text Direction Settings
+$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultFloat: left !default; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
+
+@if $textDirection == ltr {
+  $defaultFloat: left;
+  $defaultOpposite: right;
+} @else {
+  $defaultFloat: right;
+  $defaultOpposite: left;
+}
+
+// Button Settings
+$buttonRadius: 3px !default;
+$btnBase: 10px !default;
+
+$tinyBtnBase: $btnBase - 5 !default;
+$smallBtnBase: $btnBase - 3 !default;
+$largeBtnBase: $btnBase + 5 !default;
+
+$btnBasePadding: $btnBase ($btnBase * 2) ($btnBase + 1);
+$btnShinyEdge: 0 1px 0 $shinyEdge inset;
+$btnDarkEdge: 0 1px 0 $darkEdge inset;
+$btnBorderWidth: 1px;
+$btnBorderStyle: solid;
+
+// UI Settings
+$thumbRadius: 3px !default;
+$progBarHeight: 25px !default;
+$progBarBorderColor: darken(#fff, 20%) !default;
+$progBarBorderSize: 1px !default;
+$progBarPad: 2px !default;
+$linkListBottomMargin: 17px -22px !default;
+$tableBorderRadius: 3px !default;
+
+// Tooltip Settings
+$hasTipBorderBottom: dotted 1px #ccc !default;
+$hasTipFontWeight: bold !default;
+$hasTipFontColor: #333 !default;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
+$hasTipFontColorHover: $mainColor !default;
+$tooltipBackgroundColor: #000 !default;
+$tooltipBackgroundOpacity: 0.85 !default;
+$tooltipFontSize: 12px !default;
+$tooltipFontWeight: bold !default;
+$tooltipFontColor: #fff !default;
+$tapToCloseFontSize: 10 !default;
+$tapToCloseFontWeight: normal !default;
+$tapToCloseFontColor: #888 !default;
+$tooltipFontSizeScreenSm: 14 !default;
+$tooltipBgOpacityScreenSm: 0.85 !default;
+$tooltipBorderRadius: 4px !default;
+
+
+// Clearing Settings
+$clearingBg: rgba(0,0,0,0.8) !default;
+$clearingOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionBg: rgba(0,0,0,0.7) !default;
+$clearingCaptionOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionFontColor: #fff !default;
+$clearingCloseColor: #fff !default;
+$clearingArrowColor: #fff !default;
+$clearingArrowSize: 16px !default;
+$clearingCarouselBg: rgba(0,0,0,0.75) !default;
+$clearingCarouselOldBrowserBg: rgb(0,0,0) !default;
+$clearingCarouselHeight: 150px !default;
+$clearingActiveImgHeight: 75% !default;
+$clearingCarouselThumbWidth: 175px;
+$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255) !default;
+$clearingImgBg: rgba(0,0,0,0.75) !default;
+$clearingImgOldBrowserBg: rgb(0,0,0) !default;

@@ -1,0 +1,62 @@
+// Consumers
+#angelliftHeader {
+  background: #08acb2;
+  background-size: cover; position: relative; background-position-y:-150px!important;
+  padding: 3rem 2rem 2rem 2rem;
+  width: 100%;
+  text-align: center;
+  h2 {
+    color: white;
+    font-size: 1.2rem;
+  }
+}
+
+#consumersHeader {
+  background: url(/assets/jungle-hiw.svg) no-repeat center center fixed; 
+  background-size: cover; position: relative; background-position-y:-150px!important;
+  padding: 3rem 2rem 2rem 2rem;
+  width: 100%;
+  text-align: center;
+  h2 {
+    color: white;
+    font-size: 1.2rem;
+  }
+}
+#consumers {
+  background: #efefef;
+  padding: 2.5rem 0;
+  h3 {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+  }
+  hr {
+    border: 1px solid #d9d9d9;
+  }
+  .content {
+    padding: 20px;
+  }
+  .total {
+    font-size: 1em;
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #999;
+    left: 28px;
+    background: white;
+    padding: 10px 20px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    a {
+      padding: 20px 30px;
+    }
+  }
+  table {
+    width: 100%;
+  }
+}

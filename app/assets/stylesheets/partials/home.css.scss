@@ -1,0 +1,102 @@
+// Home page
+#homepage { 
+  background: url(image_path("header.png")) no-repeat #fdd2a3; 
+  background-size: cover; position: relative; background-position-y:-50px;
+  min-height: 16rem; 
+  z-index: 22;
+  h1 {
+    color: white; 
+    margin: 0.65em 0 0.2em;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .cta-login-headline h5 {
+    color: #444;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  .lynx {
+    width: 18em;
+    margin: 0 auto;
+  }
+  .lynx-head {
+    margin: 4em 0 0 0;
+    line-height: 1em;
+    font-weight: bold;
+    h1 {
+      margin-bottom: 0;
+      line-height: 3.75rem;
+      font-size: 3.75rem;
+    }
+    .pink { 
+      color: #ff554f!important; 
+    }
+  }
+  @media screen and (min-width: 1480px) {
+    height: 22rem;
+  }
+  @media screen and (max-width: 768px) {
+    .lynx-head h1 {
+      font-size: 2.5rem;
+      line-height: 3.25rem;
+    }
+  }
+}
+
+// App features
+#appfeatures {
+  padding: 4em 1em;
+  ul {
+    color: #999; 
+    font-weight: light;
+    list-style: disc outside none; 
+    margin-left: 0; 
+    padding-left: 1em;
+  }
+  .large-6.columns {
+    padding: 0 30px;
+    &:first-of-type { 
+      border-right:1px solid #e9e9e9; 
+    }
+    img {
+      display: block;
+      margin: 0 auto; 
+    }
+  }
+}
+
+// Sign up
+#signup { 
+  background: #efefef;
+  input[type="text"] { 
+    height: 3.35rem; 
+  } 
+  .prefix, .button { 
+    height: 3.25rem;
+  } 
+  .prefix {
+    padding-top: 0.5rem;
+  }
+  .button {
+    padding-top: 0.05rem;
+  }
+  .dash {
+    padding-top: 0.65rem; 
+    margin-top: 1rem;
+  }
+  .sign-up-button {
+    display: block;
+    width: 100%;
+  }
+  .simple_captcha, .simple_captcha div, input[type="text"] {
+    width: 100%!important;
+  }
+  .simple_captcha_label {
+    padding: 0.25rem 0.5rem;
+  }
+  input[type="text"] {
+    font-weight: bold;
+    padding: 0 15px;
+  }
+}

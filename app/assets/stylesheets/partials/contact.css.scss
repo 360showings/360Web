@@ -1,0 +1,34 @@
+// Sign up
+#contact { 
+  padding: 4rem 0;
+  background: #efefef;
+  input[type="text"] { 
+    height: 3.35rem; 
+  } 
+  .prefix, .button { 
+    height: 3.25rem;
+  } 
+  .prefix {
+    padding-top: 0.5rem;
+  }
+  .button {
+    padding-top: 0.05rem;
+  }
+  .dash {
+    padding-top: 0.65rem; 
+    margin-top: 1rem;
+  }
+  .sign-up-button {
+    display: block;
+    width: 100%;
+  }
+  .simple_captcha, .simple_captcha div, input[type="text"] {
+    width: 100%!important;
+  }
+  .simple_captcha_label {
+    padding: 0.25rem 0.5rem;
+  }
+  input[type="text"] {
+    margin-bottom: 0!important;
+  }
+}

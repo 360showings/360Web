@@ -1,0 +1,39 @@
+nav.top-bar {
+  &.white-header {
+    background-color: white;
+    .top-bar-section {
+      .right li a  {
+        background-color: #efefef;
+      }
+    }
+  }
+  &.angel-header {
+    background-color: #efefef;
+     .top-bar-section {
+      .right li a  {
+        background-color: #c0c0c0;
+        color: black;
+      }
+    }
+  }
+  margin-bottom: 0; 
+  .top-bar-section {
+    .right li a  {
+      background-color: #222;
+      color: darkgray;
+      &:hover {
+        background: lighten($red, 35%); color:darken($red, 10%)!important;
+      }
+    }
+    .has-dropdown {
+      cursor: pointer;
+      > a:after {
+        margin-right: 1rem;
+      }
+    }
+    .dropdown li a {
+      color: darkgray;
+      line-height: 2rem;
+    }
+  }
+}

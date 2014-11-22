@@ -1,0 +1,58 @@
+// Footer
+footer {
+  background: darken($grey, 50%);
+  color: white;
+  padding: 1em;
+  border-top: 1px solid #efefef;
+  p { 
+    font-size: 0.85em;
+  }
+  a {
+    color: white;
+  }
+  h6 {
+    color: white;
+  }
+  .loyal-logo {
+    display: block;
+    margin-top: 1rem;
+  }
+  .social {
+    margin: 0 auto;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    div {
+      display: inline-block;
+    }
+  }
+  .icon {
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 4em;
+    width: 4em;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.copyright {
+  background-color: darken($grey, 70%);; 
+  padding-top: 18px;
+  p, a {
+    margin-bottom: 0; 
+    color: white; 
+    font-size: 0.75em;
+  }
+  p { 
+    margin-top: 0.5rem;
+  }
+}
