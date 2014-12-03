@@ -1,10 +1,19 @@
 %header#homepage
-  .row.cta
-    .large-12.columns
-      .lynx-head
-        %h1 360 Showings!
-      %br
-      %blockquote.ricoh-theta-spherical-image{'data-width' => "800", 'data-height' => "575"}
-        5th Avenue in New York
-        = link_to 'Spherical Image - RICOH THETA', "https://theta360.com/m/X9Y", :target => "_blank"
-      <script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
+  .row.sign_up_form
+    - if current_user.nil?
+      = form_tag interested_candidates_path do
+        .large-12.columns.large-centered
+          %br
+          %br
+          .large-6.columns
+            %h4 Get in on the ground floor! Sign up for the latest 360 Showings news, and be the first to know when we ship.
+          .large-6.columns
+            .row.collapse
+              .large-9.columns
+                = text_field_tag "first_name", nil, :placeholder => "First Name"
+                = text_field_tag "last_name", nil, :placeholder => "Last Name"
+                = text_field_tag "email", nil, :placeholder => "Email Address"
+                = submit_tag "Sign Up", :class => "button prefix rounded"
+  %br
+  %a.iframe{:href => "http://d8d913s460fub.cloudfront.net/krpanocloud/video/erent/index.html"}
+    = image_tag 'demo.jpg'

@@ -186,20 +186,20 @@
 .publish1-circle {
   @include circleContainer; 
   background-position:-6% -15%;
-  background-size:195%;
-  background-image: url(/assets/publish1.png);
+  background-size:150%;
+  background-image: url(/assets/room.jpg);
 }
 
 .publish2-circle {
   @include circleContainer;
-  background-position:45% 30%; 
-  background-size:150%;
-  background-image: url(/assets/publish2.png);
+  background-position:0% 0%; 
+  background-size:100%;
+  background-image: url(/assets/tour.jpg);
 }
 
 .publish3-circle {
   @include circleContainer;
   background-position:20% 20%;
-  background-size:250%; 
-  background-image: url(/assets/publish3.png);
+  background-size:100%; 
+  background-image: url(/assets/phone.jpg);
 }

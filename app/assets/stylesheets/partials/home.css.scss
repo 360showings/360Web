@@ -1,6 +1,11 @@
 // Home page
+.main {
+  padding: 50px 0px;
+}
+
 #homepage { 
-  background: url(image_path("header.png")) no-repeat #fdd2a3; 
+  //background: url(image_path("header.png")) no-repeat #fdd2a3; 
+  background: no-repeat #fdd2a3; 
   background-size: cover; position: relative; background-position-y:-50px;
   min-height: 16rem; 
   z-index: 22;

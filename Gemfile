@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.20'
-ruby '2.1.4'
+ruby '2.1.5'
 gem 'pg', '0.17.1'
 gem 'nokogiri', '1.6.1'
 
@@ -49,3 +49,4 @@ end
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem "galetahub-simple_captcha", '0.1.5', :require => "simple_captcha"
