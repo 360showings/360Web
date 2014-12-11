@@ -19,7 +19,7 @@
   %title= content_for?(:title) ? yield(:title) : "360 Showings"
   = favicon_link_tag 
   = stylesheet_link_tag "application"
-  = javascript_include_tag "vendor/custom.modernizr"
+  = javascript_include_tag "custom.modernizr"
   = csrf_meta_tag
   = render 'layouts/application/shim'
 %body

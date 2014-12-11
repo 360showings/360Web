@@ -13,8 +13,6 @@
 class Candidate < ActiveRecord::Base
   include ApplicationHelper
 
-  attr_accessible :email, :first_name, :last_name
-  
   validates :email, :uniqueness => { :case_sensitive => false },
                     :format => { with: EMAIL_REGEX }
 end
