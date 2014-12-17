@@ -41,11 +41,8 @@ group :test do
   gem 'database_cleaner', '1.3.0'
   gem 'factory_girl_rails', '4.5.0'
   gem 'rspec-tag_matchers', '0.1.2'
+  gem 'rspec-its', '1.1.0'
 end
-
-#group :production do
-#  gem 'rails_12factor', '0.0.3'
-#end
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.0.1'
@@ -54,4 +51,7 @@ gem 'simple_captcha', :git => 'git://github.com/pludoni/simple-captcha.git'
 gem 'gibbon', '1.1.4'
 
 gem 'carrierwave', '0.10.0'
+gem 'carrierwave_backgrounder', '0.4.1'
 gem "fog", '1.22.1'
+gem 'rmagick', '2.13.4', :require => false
+gem 'mini_magick', '4.0.1'
